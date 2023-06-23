@@ -8,10 +8,10 @@ export const configObj: UserConfigExport = {
     port: 3000
   },
   base: '/',
-  // publicDir: './static',
+  publicDir: './src/images',
   build: {
     outDir: './dist',
-    // assetsDir: './static'
+    assetsDir: './src/images'
   },
   plugins: [React(), TSConfigPaths()]
 }

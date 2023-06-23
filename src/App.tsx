@@ -1,5 +1,5 @@
 import { Header, ImageSlider } from "components";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 export const App = () => {

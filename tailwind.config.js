@@ -31,6 +31,11 @@ module.exports = {
   plugins: [],
   theme: {
     extend: {
+      animation: {
+        'image-right': 'imageRight 14s ease-in-out infinite',
+        'image-left': 'imageLeft 14s ease-in-out infinite',
+        'separator': 'separator 14s ease-in-out infinite',
+      },
       boxShadow: {
         'interactive-1': '0px 4px 4px rgba(0, 0, 0, 0.08)',
         'interactive-2': '0px 20px 12px 0px rgba(0, 0, 0, 0.12)'
@@ -50,7 +55,7 @@ module.exports = {
       },
       colors,
       fontFamily: {
-        abc: ['ABC Social', 'sans-serif']
+        abc: ['Inter', 'sans-serif']
       },
       fontSize: {
         ...fontSize,
@@ -59,6 +64,7 @@ module.exports = {
         30: pxToRem(30),
         36: pxToRem(36),
         40: pxToRem(40),
+        46: pxToRem(46),
         80: pxToRem(80),
         100: pxToRem(100),
       },
@@ -166,6 +172,7 @@ module.exports = {
         screen: '100vh'
       },
       width: {
+        40: pxToRem(40),      
         400: pxToRem(400),      
         450: pxToRem(450),
         inherit: 'inherit',
@@ -175,7 +182,9 @@ module.exports = {
       },
       height: {
         100: pxToRem(100),
-        500: pxToRem(500),
+        500: pxToRem(500),        
+        750: pxToRem(750),        
+
         800: pxToRem(800),
         1000: pxToRem(1000),
         '25%': '25%',

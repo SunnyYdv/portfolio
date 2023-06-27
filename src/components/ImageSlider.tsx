@@ -127,14 +127,14 @@ export const ImageSlider: React.FC<IPropsImageSlider> = (
           />
 
           {leftImageLabel && (
-            <div className={"h-full w-full absolute top-50% right-[calc(100vw/3)]"}>
+            <div className={"h-full w-full select-none absolute top-50% right-[calc(100vw/3)]"}>
               <div className={cls(leftLabelStyle, leftImageLabelCss)}>
                 {leftImageLabel}
               </div>
             </div>
           )}
           {rightImageLabel && (
-            <div className={" h-full w-full absolute top-50% left-[calc(100vw/4)]"}>
+            <div className={" h-full select-none w-full absolute top-50% left-[calc(100vw/4)]"}>
               <div className={cls(rightLabelStyle, rightImageLabelCss)}>
                 {rightImageLabel}
               </div>

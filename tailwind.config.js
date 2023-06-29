@@ -65,6 +65,7 @@ module.exports = {
         36: pxToRem(36),
         40: pxToRem(40),
         46: pxToRem(46),
+        64: pxToRem(64),
         80: pxToRem(80),
         100: pxToRem(100),
       },
@@ -129,11 +130,12 @@ module.exports = {
         8: pxToRem(8)
       },
       backgroundImage: {
-        'main': 'url("https://w7.pngwing.com/pngs/622/207/png-transparent-gold-confetti-background-thumbnail.png")'
+        'blog': 'url("/blog.webp")'
       },
       maxWidth: {
         ...spacing,
         600: pxToRem(600),
+        660: pxToRem(660),
         800: pxToRem(800),
         880: pxToRem(880),
         900: pxToRem(900),

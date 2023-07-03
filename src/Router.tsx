@@ -14,11 +14,11 @@ import { createBrowserRouter } from "react-router-dom";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path={"/"} element={<App />} />
+      <Route path={"/home"} element={<App />} />
       <Route element={<PageLayout />}>
         <Route path={"/blog"} element={<Blog />} />
-        <Route path={""} element={<Navigate replace to={"/"} />} />
-        <Route path={"*"} element={<Navigate replace to={"/"} />} />
+        <Route path={""} element={<Navigate replace to={"/home"} />} />
+        <Route path={"*"} element={<Navigate replace to={"/home"} />} />
       </Route>
     </>
   )

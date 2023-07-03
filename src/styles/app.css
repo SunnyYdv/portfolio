@@ -83,6 +83,17 @@ body {
     100% { left: calc(100vw  * 0.3 ); }
   }
   
+  @keyframes geometry {
+    0% { left: 100px }
+    50% { left: calc(-100vw  * 0.15 ); }
+    100% { left: 100px }
+  } 
+   @keyframes geometry1 {
+    0% { left: 90px }
+    50% { left: calc(-100vw  * 0.25 ); }
+    100% { left: 90px }
+  }
+  
   @keyframes imageLeft {
     0% {  clip: rect(auto, calc(100vw  * 0.3 ), auto, auto),
     ; }

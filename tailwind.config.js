@@ -35,6 +35,8 @@ module.exports = {
         'image-right': 'imageRight 14s ease-in-out infinite',
         'image-left': 'imageLeft 14s ease-in-out infinite',
         'separator': 'separator 14s ease-in-out infinite',
+        'geometry-1': 'geometry 14s ease-in-out infinite',
+        'geometry-2': 'geometry1 14s ease-in-out infinite',
       },
       boxShadow: {
         'interactive-1': '0px 4px 4px rgba(0, 0, 0, 0.08)',

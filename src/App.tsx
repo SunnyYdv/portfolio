@@ -19,7 +19,7 @@ export const App = () => {
         />      
           <img
           src={'geometry2.webp'}
-          className="animate-geometry-2 pointer-events-none opacity-40  object-cover transition z-10 top-0 -mr-100 -right-250 bottom-0 left-0 absolute w-full h-full"
+          className="animate-geometry-2 pointer-events-none object-cover transition z-10 top-0  bottom-0 left-0 right-0 absolute w-full h-full"
         />
         <ImageSlider
           leftImage="freelance.webp"

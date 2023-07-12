@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.tak {
+  box-shadow: 10px 5px 5px black;
+}
+
 @font-face {
   font-family: 'Inter';
   font-weight: 200;
@@ -107,6 +112,9 @@ body {
     50% { clip: rect(auto,auto , auto ,calc(100vw  * 0.7)); }
     100% { clip: rect(auto, auto,auto , calc(100vw  * 0.3)); }
   }
+
+
+
 
 
   /* left: `${containerWidth * sliderPosition / 2}px`, */

@@ -4,14 +4,14 @@ export const About = () => {
   const h2 = "text-orange my-30 text-28";
   const h3 = "text-orange mt-32 mb-10 text-20";
   return (
-    <div className="px-30 mobile:px-15">
+    <div className="px-50 mobile:px-15">
 
-        <div className="text-64 mobile:text-32 uppercase mb-10  ">
-          <div className={'flex items-center gap-x-30'}>
-            At our company <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 0L20.4565 15.5435L36 18L20.4565 20.4565L18 36L15.5435 20.4565L0 18L15.5435 15.5435L18 0Z" fill="#A54834"/>
-          </svg>
-          </div>
+        <div className="text-64 mobile:text-32 uppercase mb-10">
+
+            <p>At our company </p>
+            <p>we provide</p>
+            <p>Professional</p>
+
         </div>
 
         <div className={'flex items-center justify-center bg-light-orange rounded-8 p-70 mt-60'}>

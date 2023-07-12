@@ -1,4 +1,4 @@
-import { Header, ImageSlider } from "components";
+import { Header, ImageSlider, Footer } from "components";
 import { useState } from "react";
 
 

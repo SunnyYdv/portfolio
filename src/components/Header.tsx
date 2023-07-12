@@ -9,6 +9,13 @@ export const Header = () => {
   const toBlog = useCallback(() => {
     navigate("/blog");
   }, []);
+
+  const toPlatforms = useCallback(() => {
+    navigate("/platforms");
+  }, []);
+  const toAbouts = useCallback(() => {
+    navigate("/about");
+  }, []);
   
   const toHome = useCallback(() => {
     navigate("/home");
@@ -31,8 +38,16 @@ export const Header = () => {
         })}>
           How it works
         </span>
-        <span className="cursor-pointer ">Platforms</span>
-        <span className="cursor-pointer ">About</span>
+        <span onClick={toPlatforms} className={cls("cursor-pointer", {
+          "text-orange border-b pb-10 border-b-orange border-b-2 ": location.pathname.includes("platforms"),
+        })}>
+          Platforms
+        </span>
+        <span onClick={toAbouts} className={cls("cursor-pointer", {
+          "text-orange border-b pb-10 border-b-orange border-b-2 ": location.pathname.includes("about"),
+        })}>
+          About
+        </span>
       </div>
     </nav>
   );

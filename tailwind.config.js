@@ -65,7 +65,9 @@ module.exports = {
         28: pxToRem(28),
         30: pxToRem(30),
         36: pxToRem(36),
+        38: pxToRem(38),
         40: pxToRem(40),
+        58: pxToRem(58),
         46: pxToRem(46),
         64: pxToRem(64),
         80: pxToRem(80),
@@ -132,7 +134,8 @@ module.exports = {
         8: pxToRem(8)
       },
       backgroundImage: {
-        'blog': 'url("/blog.webp")'
+        'blog': 'url("/blog.webp")',
+        'platforms': 'url("/platforms.png")',
       },
       maxWidth: {
         ...spacing,
@@ -187,8 +190,7 @@ module.exports = {
       height: {
         100: pxToRem(100),
         500: pxToRem(500),        
-        750: pxToRem(750),        
-
+        750: pxToRem(750),
         800: pxToRem(800),
         1000: pxToRem(1000),
         '25%': '25%',

@@ -107,8 +107,6 @@ export const Blog = () => {
           We hope that these tips will help you create an attractive and
           effective portfolio that you can be proud of. Good luck!
         </p>
-        <h2 className={h2}>Partners</h2>
-
       </div>
     </div>
   );

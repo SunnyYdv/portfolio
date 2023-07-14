@@ -1,6 +1,9 @@
 import cls from "classnames";
+import { Link, NavLink, animateScroll, Element } from "react-scroll"
 
 export const Platforms = () => {
+
+  console.log(animateScroll, 'animateScroll')
   const h2 = "text-orange my-30 text-28";
   const h3 = "text-orange mt-32 mb-10 text-20";
   return (
@@ -15,20 +18,35 @@ export const Platforms = () => {
         </div>
       </div>
 
-      <div className={'flex pt-80 '}>
+      <div className={'flex pt-80'}>
+
         <div className={'bg-light-orange p-20 rounded-8 h-1/2'}>
           <p>Introduction</p>
-          <p>Best platforms for freelancers</p>
+          <p className={'my-10'}>Best platforms for freelancers</p>
           <div className={'ml-10'}>
-            <p>Upwork</p>
-            <p>Freelancer</p>
-            <p>99designs</p>
+            <Link activeClass={"active"} spy={true} to="Upwork" smooth={true} duration={500} offset={-90}>
+              <p className={'cursor-pointer'}>Upwork</p>
+            </Link>
+
+            <Link activeClass="active" to="Freelancer" smooth={true} duration={500} offset={-90}>
+              <p className={'cursor-pointer my-8'}>Freelancer</p>
+            </Link>
+            <Link activeClass="active" to="99designs" smooth={true} duration={500} offset={-90}>
+              <p className={'cursor-pointer'}>99designs</p>
+            </Link>
+
           </div>
-          <p>Best platforms for job search</p>
+          <p className={'my-10'}>Best platforms for job search</p>
           <div className={'ml-10'}>
-            <p>XING</p>
-            <p>Indeed</p>
-            <p>CareerBuilder</p>
+            <Link activeClass="active" to="XING" smooth={true} duration={500} offset={-90}>
+              <p className={'cursor-pointer'}>XING</p>
+            </Link>
+            <Link activeClass="active" to="Indeed" smooth={true} duration={500} offset={-90}>
+              <p className={'cursor-pointer  my-8'}>Indeed</p>
+            </Link>
+            <Link activeClass="active" to="CareerBuilder" smooth={true} duration={500} offset={-90}>
+              <p className={'cursor-pointer'}>CareerBuilder</p>
+            </Link>
           </div>
         </div>
         <div className="max-w-660 px-20 mx-auto pb-100 mobile:pt-20 mobile:pb-50">
@@ -54,7 +72,6 @@ export const Platforms = () => {
           <p>In this article we will tell you about freelance websites that will be useful for
             both novice designers and professionals. In addition, you will learn:
           </p>
-
           <ul className={'mt-40'}>
             <li>&#183; how to make money on freelancing;</li>
             <li>&#183; which approach to work is the most effective;</li>
@@ -65,10 +82,12 @@ export const Platforms = () => {
 
           <h2 className={cls(h2, 'text-center border border-1 border-[#FFE9D2] p-15')}>Best platforms for <span className={'bg-[#FFE9D2] p-2 rounded-4 '}>freelancers</span></h2>
 
+          <Element name="Upwork"/>
           <div className={'flex justify-between items-center'}>
             <div className={'flex block items-center'}>
               <img className={'w-full h-full mr-20'} src="upwork.png" alt=""/>
-              <h2 className={h2}>Upwork</h2>
+             <h2 className={h2}>Upwork</h2>
+
             </div>
 
             <img className={'w-44 h-44'} src="export.png" alt=""/>
@@ -83,7 +102,6 @@ export const Platforms = () => {
           <img className={'mt-20 border border-light-orange rounded-8'} src="up-work.png" alt=""/>
           <p className={'text-[#686462] text-12 mt-5'}>Screenshot of the service Upwork</p>
 
-
           <div className={'mt-20 bg-light-orange p-20 rounded-8'}>
             <h3 className={'font-bold text-20'}>Service Features</h3>
             <p className={'text-orange mt-12'}>Price:</p>
@@ -92,9 +110,7 @@ export const Platforms = () => {
             <p className={'mt-5'}> Money can be withdrawn to bank cards, Payoneer, Paypal, and through bank transfers.</p>
           </div>
 
-
-
-
+          <Element name="Freelancer"/>
           <div className={'flex justify-between items-center mt-60'}>
             <div className={'flex block items-center'}>
               <img className={'w-full h-full mr-20'} src="free.png" alt=""/>
@@ -126,7 +142,7 @@ export const Platforms = () => {
 
 
 
-
+          <Element name="99designs"/>
           <div className={'flex justify-between items-center mt-60'}>
             <div className={'flex block items-center'}>
               <img className={'w-full h-full mr-20'} src="99d-work.png" alt=""/>
@@ -160,7 +176,8 @@ export const Platforms = () => {
           <h2 className={cls(h2, 'text-center border border-1 border-[#FFE9D2] p-15')}>Best platforms for <span className={'bg-[#FFE9D2] p-2 rounded-4 '}>job search</span></h2>
 
 
-
+           Indeed  CareerBuilder
+          <Element name="XING"/>
           <div className={'flex justify-between items-center mt-40'}>
             <div className={'flex block items-center'}>
               <img className={'w-full h-full mr-20'} src="xing.png" alt=""/>
@@ -191,9 +208,8 @@ export const Platforms = () => {
           </div>
 
 
-
-
-
+            CareerBuilder
+          <Element name="Indeed"/>
           <div className={'flex justify-between items-center mt-40'}>
             <div className={'flex block items-center'}>
               <img className={'w-full h-full mr-20'} src="indeed.png" alt=""/>
@@ -224,6 +240,7 @@ export const Platforms = () => {
           </div>
 
 
+          <Element name="CareerBuilder"/>
           <div className={'flex justify-between items-center mt-40'}>
             <div className={'flex block items-center'}>
               <img className={'w-full h-full mr-20'} src="career.png" alt=""/>

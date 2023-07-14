@@ -7,6 +7,11 @@
   box-shadow: 10px 5px 5px black;
 }
 
+.active {
+  color: red;
+  background: black;
+}
+
 @font-face {
   font-family: 'Inter';
   font-weight: 200;

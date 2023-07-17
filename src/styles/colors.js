@@ -4,7 +4,6 @@ module.exports = {
   transparent: "transparent",
   white: "#FFFFFF",
   black: "#000000",
-  error: "#B3212A",
   warning: "#FFAA01",
   success: "#00843F",
   page: "#FFF8F1",

@@ -111,8 +111,7 @@ module.exports = {
       },
       borderRadius: {
         ...borderRadius,
-        25: '25%',
-        50: '50%'
+        50: pxToRem(50)
       },
       ringWidth: {
         0: 0,

@@ -13,6 +13,7 @@ export const Header = () => {
   const toPlatforms = useCallback(() => {
     navigate("/platforms");
   }, []);
+  
   const toAbouts = useCallback(() => {
     navigate("/about");
   }, []);
@@ -24,9 +25,9 @@ export const Header = () => {
   return (
     <nav
       className={cls(
-        "fixed z-20 text-24 mobile:text-20 flex items-center gap-x-20 p-20 px-40 mobile:px-20 justify-between w-full ",
+        "fixed z-20 text-24 mobile:text-20 flex  items-center gap-x-20 p-20 px-40 mobile:px-20 justify-between w-full ",
         {
-          "text-black bg-white": !location.pathname.includes("home"),
+          "text-black bg-page": !location.pathname.includes("home"),
           "text-white bg-none ": location.pathname.includes("home"),
         }
       )}

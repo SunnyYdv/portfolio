@@ -3,7 +3,6 @@ import { Link, NavLink, animateScroll, Element } from "react-scroll"
 
 export const Platforms = () => {
 
-  console.log(animateScroll, 'animateScroll')
   const h2 = "text-orange my-30 text-28";
   const h3 = "text-orange mt-32 mb-10 text-20";
   return (

@@ -12,7 +12,7 @@ export const Footer = () => {
   }, []);
 
   return (
-        <div className={'bg-red-10 py-55 '}>
+        <div className={'bg-red-10 py-55 pt-100 -z-10'}>
           <div className={'flex justify-between items-center mx-50'}>
             <div className={'flex gap-x-100 text-white'}>
               <a onClick={toHome}><img className={'w-58 h-58 cursor-pointer'} src="logoFooter.png" alt=""/></a>
@@ -28,7 +28,7 @@ export const Footer = () => {
               </div>
             </div>
 
-            <div className={'text-[#FFF1F6]'}>
+            <div className={'text-page'}>
               <p className={'text-12'}>Developed by </p>
               <p className={'text-20'}>Brightlab</p>
             </div>

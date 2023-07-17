@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .tak {
   box-shadow: 10px 5px 5px black;
 }
@@ -13,113 +12,138 @@
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Manrope";
   font-weight: 200;
-  src: url('./fonts/Inter-Light.woff2'), url('./fonts/Inter-Light.woff'), url('./fonts/Inter-Light.ttf');
+  src: url("./fonts/Manrope-Light.woff2"), url("./fonts/Manrope-Light.woff"),
+    url("./fonts/Manrope-Light.ttf");
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Manrope";
   font-weight: 400;
-  src: url('./fonts/Inter-Regular.woff2'), url('./fonts/Inter-Regular.woff'),
-  url('./fonts/Inter-Regular.ttf');
+  src: url("./fonts/Manrope-Regular.woff2"), url("./fonts/Manrope-Regular.woff"),
+    url("./fonts/Manrope-Regular.ttf");
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Manrope";
   font-weight: 500;
-  src: url('./fonts/Inter-Medium.woff2'), url('./fonts/Inter-Medium.woff'),
-  url('./fonts/Inter-Medium.ttf');
+  src: url("./fonts/Manrope-Medium.woff2"), url("./fonts/Manrope-Medium.woff"),
+    url("./fonts/Manrope-Medium.ttf");
 }
 
 @font-face {
-  font-family: 'Inter';
-  font-weight: 700;
-  src: url('./fonts/Inter-Bold.woff2'), url('./fonts/Inter-Bold.woff'), url('./fonts/Inter-Bold.ttf');
-
-
-}@font-face {
-font-family: 'Inter';
-font-weight: 900;
-src: url('./fonts/Inter-Black.woff2'), url('./fonts/Inter-Black.woff'), url('./fonts/Inter-Black.ttf');
+  font-family: "Manrope";
+  font-weight: 600;
+  src: url("./fonts/Manrope-Semibold.woff2"),
+    url("./fonts/Manrope-Semibold.woff"), url("./fonts/Manrope-Semibold.ttf");
 }
 
+@font-face {
+  font-family: "Manrope";
+  font-weight: 700;
+  src: url("./fonts/Manrope-Bold.woff2"), url("./fonts/Manrope-Bold.woff"),
+    url("./fonts/Manrope-Bold.ttf");
+}
 
 body {
-  font-family: 'Inter' !important;
+  font-family: "Manrope" !important;
 }
 .absolute-vertical-center {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.absolute-horizontal-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.absolute-bottom {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -0%);
+}
+.absolute-top {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clip-image-right {
+  clip: rect(auto, auto, auto, calc(100vw * 0.3));
+}
+.clip-image-left {
+  clip: rect(auto, calc(100vw * 0.3), auto, auto);
+}
+
+@keyframes separator {
+  0% {
+    left: calc(100vw * 0.3);
   }
-
-  .absolute-horizontal-center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  50% {
+    left: calc(100vw * 0.7);
   }
-
-  .absolute-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  } 
-   .absolute-bottom {
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transform: translate(-50%, -0%);
-  } 
-    .absolute-top {
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }   
-  
-  
-  .clip-image-right {
-    clip: rect(auto,auto , auto, calc(100vw * 0.3)),
-  } 
-   .clip-image-left {
-    clip: rect(auto, calc(100vw * 0.3), auto, auto),
+  100% {
+    left: calc(100vw * 0.3);
   }
+}
 
-  @keyframes separator {
-    0% { left: calc(100vw  * 0.3  ); }
-    50% { left: calc(100vw  * 0.7 ); }
-    100% { left: calc(100vw  * 0.3 ); }
+@keyframes geometry {
+  0% {
+    left: 100px;
   }
-  
-  @keyframes geometry {
-    0% { left: 100px }
-    50% { left: calc(-100vw  * 0.15 ); }
-    100% { left: 100px }
-  } 
-   @keyframes geometry1 {
-    0% { left: 90px }
-    50% { left: calc(-100vw  * 0.25 ); }
-    100% { left: 90px }
+  50% {
+    left: calc(-100vw * 0.15);
   }
-  
-  @keyframes imageLeft {
-    0% {  clip: rect(auto, calc(100vw  * 0.3 ), auto, auto),
-    ; }
-    50% { clip: rect(auto, calc(100vw  * 0.7), auto, auto); }
-    100% { clip: rect(auto, calc(100vw  * 0.3), auto, auto); }
-  } 
-  
-  @keyframes imageRight {
-    0% {  clip: rect(auto, auto , auto,calc(100vw  * 0.3) ),
-    ; }
-    50% { clip: rect(auto,auto , auto ,calc(100vw  * 0.7)); }
-    100% { clip: rect(auto, auto,auto , calc(100vw  * 0.3)); }
+  100% {
+    left: 100px;
   }
+}
+@keyframes geometry1 {
+  0% {
+    left: 90px;
+  }
+  50% {
+    left: calc(-100vw * 0.25);
+  }
+  100% {
+    left: 90px;
+  }
+}
 
+@keyframes imageLeft {
+  0% {
+    clip: rect(auto, calc(100vw * 0.3), auto, auto);
+  }
+  50% {
+    clip: rect(auto, calc(100vw * 0.7), auto, auto);
+  }
+  100% {
+    clip: rect(auto, calc(100vw * 0.3), auto, auto);
+  }
+}
 
+@keyframes imageRight {
+  0% {
+    clip: rect(auto, auto, auto, calc(100vw * 0.3));
+  }
+  50% {
+    clip: rect(auto, auto, auto, calc(100vw * 0.7));
+  }
+  100% {
+    clip: rect(auto, auto, auto, calc(100vw * 0.3));
+  }
+}
 
-
-
-  /* left: `${containerWidth * sliderPosition / 2}px`, */
+/* left: `${containerWidth * sliderPosition / 2}px`, */

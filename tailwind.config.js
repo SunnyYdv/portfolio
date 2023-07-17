@@ -67,8 +67,9 @@ module.exports = {
         36: pxToRem(36),
         38: pxToRem(38),
         40: pxToRem(40),
-        58: pxToRem(58),
         46: pxToRem(46),
+        48: pxToRem(48),
+        58: pxToRem(58),
         64: pxToRem(64),
         80: pxToRem(80),
         100: pxToRem(100),
@@ -111,6 +112,7 @@ module.exports = {
       },
       borderRadius: {
         ...borderRadius,
+        15: pxToRem(15),
         50: pxToRem(50)
       },
       ringWidth: {
@@ -149,6 +151,7 @@ module.exports = {
         '50%': '50%',
         '60%': '60%',
         '75%': '75%',
+        '80%': '80%',
         '100%': '100%',
         screen: '100vw',
         fit: 'fit-content'
@@ -206,6 +209,9 @@ module.exports = {
       },
       rotate: {
         360: '360deg'
+      },
+      fontFamily: {
+        regarn: "Regarn"
       }
     }
   }

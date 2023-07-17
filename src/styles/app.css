@@ -46,6 +46,12 @@
     url("./fonts/Manrope-Bold.ttf");
 }
 
+@font-face {
+  font-family: "Regarn";
+  font-weight: 300;
+  src: url("./fonts/Regarn-Light.ttf");
+}
+
 body {
   font-family: "Manrope" !important;
 }

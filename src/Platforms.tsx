@@ -2,7 +2,7 @@ import { Icons } from "components/Icons";
 import { Link, Element } from "react-scroll";
 
 export const Platforms = () => {
-  const h2 = "text-orange font-semibold my-30 text-28 mobile:text-20";
+  const h2 = "text-orange font-bold font-manrope my-30 text-28 mobile:text-20";
 
   return (
     <div className="px-30  mobile:px-15 ">

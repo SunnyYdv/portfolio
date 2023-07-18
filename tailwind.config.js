@@ -211,7 +211,8 @@ module.exports = {
         360: '360deg'
       },
       fontFamily: {
-        regarn: "Regarn"
+        regarn: "Regarn",
+        manrope: "Manrope"
       }
     }
   }

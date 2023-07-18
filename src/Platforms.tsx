@@ -16,7 +16,7 @@ export const Platforms = () => {
         </div>
       </div>
 
-      <div className={"justify-center flex mobile:flex-col"}>
+      <div className={"justify-center mr-100 mobile:mr-0 flex mobile:flex-col"}>
         <div className={"bg-light-orange sticky p-20 rounded-8 h-fit"}>
           <p>Introduction</p>
           <p className={"my-10"}>Best platforms for freelancers</p>

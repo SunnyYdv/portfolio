@@ -39,7 +39,9 @@ export const Platforms = () => {
               duration={500}
               offset={-90}
             >
-              <p className={"cursor-pointer my-8 hover:text-orange"}>Freelancer</p>
+              <p className={"cursor-pointer my-8 hover:text-orange"}>
+                Freelancer
+              </p>
             </Link>
             <Link
               activeClass="active"
@@ -78,7 +80,9 @@ export const Platforms = () => {
               duration={500}
               offset={-90}
             >
-              <p className={"cursor-pointer hover:text-orange"}>CareerBuilder</p>
+              <p className={"cursor-pointer hover:text-orange"}>
+                CareerBuilder
+              </p>
             </Link>
           </div>
         </div>
@@ -92,8 +96,8 @@ export const Platforms = () => {
           <p className="mb-20">
             There are many professions where freelancing is a full—fledged
             source of income. Moreover, this is remote work: you can work from
-            anywhere in the world and receive large orders—freelance is not
-            tied to geography.
+            anywhere in the world and receive large orders—freelance is not tied
+            to geography.
           </p>
           <p className="mb-20">
             Another advantage of freelancing is a great start in the profession,
@@ -133,9 +137,9 @@ export const Platforms = () => {
               />
               <h2 className={h2}>Upwork</h2>
             </div>
-            <button className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
+            <a href="https://www.upwork.com/"  className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
               <Icons.Link className="text-page" />
-            </button>
+            </a>
           </div>
           <p className={""}>
             Upwork is a large and well-known freelance exchange for designers
@@ -183,9 +187,12 @@ export const Platforms = () => {
               <h2 className={h2}>Freelancer</h2>
             </div>
 
-            <button className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
+            <a
+              className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20"
+              href="https://www.freelancer.com/"
+            >
               <Icons.Link className="text-page" />
-            </button>
+            </a>
           </div>
           <p>
             Freelancer is a popular international exchange with a user-friendly
@@ -237,9 +244,9 @@ export const Platforms = () => {
               <h2 className={h2}>99designs</h2>
             </div>
 
-            <button className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
+            <a href="https://99designs.com/" className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
               <Icons.Link className="text-page" />
-            </button>
+            </a>
           </div>
           <p>
             For freelance designers looking for jobs, 99designs offers plenty of
@@ -292,9 +299,9 @@ export const Platforms = () => {
               <h2 className={h2}>XING</h2>
             </div>
 
-            <button className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
+            <a href="https://www.xing.com" className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
               <Icons.Link className="text-page" />
-            </button>
+            </a>
           </div>
           <p>
             XING is the social network for business professionals. More than 20
@@ -356,9 +363,9 @@ export const Platforms = () => {
               <h2 className={h2}>Indeed</h2>
             </div>
 
-            <button className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
+            <a href="https://www.indeed.com/" className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
               <Icons.Link className="text-page" />
-            </button>
+            </a>
           </div>
           <p>
             Indeed is a leading job search engine that aggregates job listings
@@ -418,9 +425,9 @@ export const Platforms = () => {
               <h2 className={h2}>CareerBuilder</h2>
             </div>
 
-            <button className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
+            <a href="https://www.careerbuilder.com" className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
               <Icons.Link className="text-page" />
-            </button>
+            </a>
           </div>
           <p>
             CareerBuilder  is a job board and recruitment platform that connects

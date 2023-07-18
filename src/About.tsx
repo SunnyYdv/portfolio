@@ -2,8 +2,7 @@ import cls from "classnames";
 import { Icons } from "components/Icons";
 
 export const About = () => {
-  const h2 = "text-orange my-30 text-28";
-  const h3 = "text-orange mt-32 mb-10 text-20";
+
   return (
     <div className="px-50 mobile:px-15">
       <div className="text-48 mobile:text-26 uppercase mb-10">
@@ -21,12 +20,12 @@ export const About = () => {
       </div>
 
       <img
-        className={"rounded-15 w-full h-full mb-20"}
+        className={"rounded-15 w-full h-full mt-20 mb-30"}
         src="freelance-com.webp"
         alt="freelance com"
       />
 
-      <div className={cls("max-w-880 text-38 text-orange mb-60")}>
+      <div className={cls("max-w-880 text-38 mobile:text-24 text-orange mb-60")}>
         We assure you of confidentiality, effectiveness, and the provision of
         high-quality services.
       </div>
@@ -57,7 +56,7 @@ export const About = () => {
         </div>
       </div>
 
-      <div className={"text-orange text-28 max-w-660 mt-60 mb-120 mobile:mb-100"}>
+      <div className={"text-orange text-28 mobile:text-24 max-w-660 mt-60 mb-120 mobile:mb-100"}>
         By engaging our services, you can expect to receive professional
         consultation, a personalized approach, and practical assistance crucial
         for a fruitful job search and triumph on freelance platforms.

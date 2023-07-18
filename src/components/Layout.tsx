@@ -1,9 +1,18 @@
 import { Header, Footer } from 'components'
-import { FC, memo } from 'react'
-import { Outlet } from 'react-router'
+import { FC, memo, useEffect } from 'react'
+import { Outlet, useLocation } from 'react-router'
 
 
 export const PageLayout: FC = memo(() => {
+  const location = useLocation();
+
+  useEffect(()=>{
+    window.scrollTo({
+      top: 0,
+      left: 0
+    });
+  },[location])
+
   return (
     <div className={'overflow-hidden flex flex-col min-h-screen w-full children:flex-grow'}>
       <Header/>

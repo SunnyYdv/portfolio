@@ -29,10 +29,10 @@ export const Footer = () => {
           <div className="mobile:mb-15">
             <p className={"text-12 font-thin"}>Number</p>
             <a
-              href="tel:+1212354213215:26"
+              href="tel:+12123542132"
               className={"text-20 mobile:text-16 cursor-pointer "}
             >
-              +1 212 354 213215:26
+              +1 212 354 2132
             </a>
           </div>
 

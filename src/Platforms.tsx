@@ -1,10 +1,8 @@
-import cls from "classnames";
 import { Icons } from "components/Icons";
-import { Link, NavLink, animateScroll, Element } from "react-scroll";
+import { Link, Element } from "react-scroll";
 
 export const Platforms = () => {
   const h2 = "text-orange font-semibold my-30 text-28 mobile:text-20";
-  const h3 = "text-orange mt-32 mb-10 text-20";
 
   return (
     <div className="px-30  mobile:px-15 ">
@@ -31,7 +29,7 @@ export const Platforms = () => {
               duration={500}
               offset={-90}
             >
-              <p className={"cursor-pointer"}>Upwork</p>
+              <p className={"cursor-pointer hover:text-orange"}>Upwork</p>
             </Link>
 
             <Link
@@ -41,7 +39,7 @@ export const Platforms = () => {
               duration={500}
               offset={-90}
             >
-              <p className={"cursor-pointer my-8"}>Freelancer</p>
+              <p className={"cursor-pointer my-8 hover:text-orange"}>Freelancer</p>
             </Link>
             <Link
               activeClass="active"
@@ -50,7 +48,7 @@ export const Platforms = () => {
               duration={500}
               offset={-90}
             >
-              <p className={"cursor-pointer"}>99designs</p>
+              <p className={"cursor-pointer hover:text-orange"}>99designs</p>
             </Link>
           </div>
           <p className={"my-10"}>Best platforms for job search</p>
@@ -62,7 +60,7 @@ export const Platforms = () => {
               duration={500}
               offset={-90}
             >
-              <p className={"cursor-pointer"}>XING</p>
+              <p className={"cursor-pointer hover:text-orange"}>XING</p>
             </Link>
             <Link
               activeClass="active"
@@ -71,7 +69,7 @@ export const Platforms = () => {
               duration={500}
               offset={-90}
             >
-              <p className={"cursor-pointer  my-8"}>Indeed</p>
+              <p className={"cursor-pointer hover:text-orange my-8"}>Indeed</p>
             </Link>
             <Link
               activeClass="active"
@@ -80,7 +78,7 @@ export const Platforms = () => {
               duration={500}
               offset={-90}
             >
-              <p className={"cursor-pointer"}>CareerBuilder</p>
+              <p className={"cursor-pointer hover:text-orange"}>CareerBuilder</p>
             </Link>
           </div>
         </div>
@@ -120,15 +118,7 @@ export const Platforms = () => {
             <li>&#183; how to attract a customer;</li>
             <li>&#183; how to avoid mistakes.</li>
           </ul>
-          <h2
-            className={cls(
-              h2,
-              "text-center border border-1 border-[#FFE9D2] p-15"
-            )}
-          >
-            Best platforms for{" "}
-            <span className={"bg-[#FFE9D2] p-2 rounded-4 "}>freelancers</span>
-          </h2>
+          <img src="best-platform.webp" className="my-40" />
           <Element name="Upwork" />
           <div
             className={"flex justify-between items-center mb-20 mobile:mb-5"}
@@ -136,9 +126,9 @@ export const Platforms = () => {
             <div className={"flex items-center"}>
               <img
                 className={
-                  "w-full h-full mr-20 mobile:h-42 mobile:w-42 mobile:mr-10"
+                  "w-80 h-80 mr-20 mobile:h-42 mobile:w-42 mobile:mr-10"
                 }
-                src="upwork.png"
+                src="upwork.webp"
                 alt=""
               />
               <h2 className={h2}>Upwork</h2>
@@ -157,7 +147,7 @@ export const Platforms = () => {
           </p>
           <img
             className={"mt-20 border border-light-orange rounded-8"}
-            src="up-work.png"
+            src="up-work.webp"
             alt=""
           />
           <p className={"text-12 mt-5"}>Screenshot of the service Upwork</p>
@@ -185,9 +175,9 @@ export const Platforms = () => {
             <div className={"flex block items-center"}>
               <img
                 className={
-                  "w-full h-full mr-20 mobile:h-42 mobile:w-42 mobile:mr-10"
+                  "w-80 h-80 mr-20 mobile:h-42 mobile:w-42 mobile:mr-10"
                 }
-                src="free.png"
+                src="free.webp"
                 alt=""
               />
               <h2 className={h2}>Freelancer</h2>
@@ -209,7 +199,7 @@ export const Platforms = () => {
           <figure>
             <img
               className={"mt-20 border border-light-orange rounded-8"}
-              src="need.png"
+              src="need.webp"
               alt=""
             />
             <figcaption className={"text-12 mt-5"}>
@@ -239,9 +229,9 @@ export const Platforms = () => {
             <div className={"flex block items-center"}>
               <img
                 className={
-                  "w-full h-full mr-20 mobile:h-42 mobile:w-42 mobile:mr-10"
+                  "w-80 h-80 mr-20 mobile:h-42 mobile:w-42 mobile:mr-10"
                 }
-                src="99d-work.png"
+                src="99d-work.webp"
                 alt=""
               />
               <h2 className={h2}>99designs</h2>
@@ -261,7 +251,7 @@ export const Platforms = () => {
           <figure>
             <img
               className={"mt-20 border border-light-orange rounded-8"}
-              src="99banner.png"
+              src="99banner.webp"
               alt=""
             />
             <figcaption className={"text-12 mt-5"}>
@@ -283,15 +273,7 @@ export const Platforms = () => {
               days and sooner for people with higher profile levels.
             </p>
           </div>
-          <h2
-            className={cls(
-              h2,
-              "text-center border border-1 border-[#FFE9D2] p-15"
-            )}
-          >
-            Best platforms for{" "}
-            <span className={"bg-[#FFE9D2] p-2 rounded-4 "}>job search</span>
-          </h2>
+          <img src="best-search.webp" className="my-40" />
           Indeed CareerBuilder
           <Element name="XING" />
           <div
@@ -302,9 +284,9 @@ export const Platforms = () => {
             <div className={"flex block items-center"}>
               <img
                 className={
-                  "w-full h-full mr-20 mobile:h-42 mobile:w-42 mobile:mr-10"
+                  "w-80 h-80 mr-20 mobile:h-42 mobile:w-42 mobile:mr-10"
                 }
-                src="xing.png"
+                src="xing.webp"
                 alt=""
               />
               <h2 className={h2}>XING</h2>
@@ -324,7 +306,7 @@ export const Platforms = () => {
           <figure>
             <img
               className={"mt-20 border border-light-orange rounded-8"}
-              src="xing-banner.png"
+              src="xing-banner.webp"
               alt=""
             />
             <figcaption className={"text-12 mt-5"}>
@@ -366,9 +348,9 @@ export const Platforms = () => {
             <div className={"flex block items-center"}>
               <img
                 className={
-                  "w-full h-full mr-20 mobile:h-42 mobile:w-42 mobile:mr-10"
+                  "w-80 h-80 mr-20 mobile:h-42 mobile:w-42 mobile:mr-10"
                 }
-                src="indeed.png"
+                src="indeed.webp"
                 alt=""
               />
               <h2 className={h2}>Indeed</h2>
@@ -388,7 +370,7 @@ export const Platforms = () => {
           <figure>
             <img
               className={"mt-20 border border-light-orange rounded-8"}
-              src="indeed-banner.png"
+              src="indeed-banner.webp"
               alt="indeed"
             />
             <figcaption className={"text-12 mt-5"}>
@@ -428,9 +410,9 @@ export const Platforms = () => {
             <div className={"flex block items-center"}>
               <img
                 className={
-                  "w-full h-full mr-20 mobile:h-42 mobile:w-42 mobile:mr-10"
+                  "w-80 h-80 mr-20 mobile:h-42 mobile:w-42 mobile:mr-10"
                 }
-                src="career.png"
+                src="career.webp"
                 alt=""
               />
               <h2 className={h2}>CareerBuilder</h2>
@@ -449,7 +431,7 @@ export const Platforms = () => {
           <figure>
             <img
               className={"mt-20 border border-light-orange rounded-8"}
-              src="career-banner.png"
+              src="career-banner.webp"
               alt="career"
             />
             <figcaption className={"text-12 mt-5"}>

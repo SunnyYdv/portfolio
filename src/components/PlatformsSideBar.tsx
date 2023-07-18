@@ -14,9 +14,9 @@ export const PlatformsSideBar = () => {
   };
 
   return (
-    <div className={cls("relative overflow-hidden transition-margin duration-500 h-fit rounded-8",{
-      "-mb-300": isMobile && !isShow,
-      "-mb-20": !isMobile || isShow,
+    <div className={cls("relative overflow-hidden transition-margin duration-1000 h-fit rounded-8",{
+      "-mb-300 ": isMobile && !isShow,
+      "-mb-20 ": !isMobile || isShow,
     })}>
       <div
         onClick={handleToggleIsShow}

@@ -67,10 +67,6 @@ body {
   transform: translateX(-50%);
 }
 
-.center {
-  transition: all 500ms ease;
-}
-
 .absolute-center {
   position: absolute;
   top: 50%;
@@ -156,21 +152,3 @@ body {
   }
 }
 
-@keyframes sideBarOpen {
-  0% {
-    height: 58px;
-  }
-  100% {
-   height: 100%
-  }
-}
-@keyframes sideBarClose {
-  0% {
-    height: 100%
-  }
-  100% {
-    height: 58px;
-  }
-}
-
-/* left: `${containerWidth * sliderPosition / 2}px`, */

@@ -19,9 +19,9 @@ export const App = () => {
           leftImageLabel={"FREELANCE"}
           rightImageLabel={"OFFICE"}
           rightImageLabelCss={
-            "tracking-[18px] text-46 mobile:tracking-tight mobile:text-40"
+            "tracking-[18px] text-46 mobile:tracking-wide mobile:text-20 mobile:font-bold"
           }
-          leftImageLabelCss={`tracking-[18px] text-46 mobile:tracking-tight  mobile:text-40`}
+          leftImageLabelCss={'tracking-[18px] text-46 mobile:tracking-wide  mobile:text-20 mobile:font-bold'}
         />
       </div>
     </div>

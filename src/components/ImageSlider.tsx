@@ -62,7 +62,7 @@ export const ImageSlider: React.FC<IPropsImageSlider> = (
   const allImagesLoaded = rightImgLoaded && leftImgLoaded;
 
   const сontainerStyle = `box-border relative w-full overflow-hidden h-screen`;
-  const leftLabelStyle = `text-white absolute -translate-y-2/4 -translate-x-2/4`;
+  const leftLabelStyle = `text-white absolute -translate-y-2/4 mobile:translate-y-none -translate-x-2/4`;
   const rightLabelStyle = `text-white absolute -translate-y-2/4 -translate-x-2/4`;
   const separatorStyle = `h-full absolute flex grow bg-white w-2 `;
 
@@ -127,14 +127,14 @@ export const ImageSlider: React.FC<IPropsImageSlider> = (
           />
 
           {leftImageLabel && (
-            <div className={"h-full w-full select-none absolute top-50% right-[calc(100vw/3)]"}>
+            <div className={"h-full w-full select-none absolute top-50% mobile:top-20% right-[calc(100vw/3)] mobile:right-[calc(100vw/4)]"}>
               <div className={cls(leftLabelStyle, leftImageLabelCss)}>
                 {leftImageLabel}
               </div>
             </div>
           )}
           {rightImageLabel && (
-            <div className={" h-full select-none w-full absolute top-50% left-[calc(100vw/4)]"}>
+            <div className={" h-full select-none w-full absolute top-50% mobile:top-20% left-[calc(100vw/4)] mobile:left-[calc(100vw/5)]"}>
               <div className={cls(rightLabelStyle, rightImageLabelCss)}>
                 {rightImageLabel}
               </div>

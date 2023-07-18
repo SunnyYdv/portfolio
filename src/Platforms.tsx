@@ -1,8 +1,10 @@
 import { Icons } from "components/Icons";
 import { Link, Element } from "react-scroll";
+import cls from "classnames";
+import { PlatformsSideBar } from "components";
 
 export const Platforms = () => {
-  const h2 = "text-orange font-bold font-manrope my-30 text-28 mobile:text-20";
+  const h2 = "text-orange font-bold font-manrope my-30 mobile:my-20 text-28 mobile:text-20";
 
   return (
     <div className="px-30  mobile:px-15 ">
@@ -17,75 +19,7 @@ export const Platforms = () => {
       </div>
 
       <div className={"justify-center mr-100 mobile:mr-0 flex mobile:flex-col"}>
-        <div className={"bg-light-orange sticky p-20 rounded-8 h-fit"}>
-          <p>Introduction</p>
-          <p className={"my-10"}>Best platforms for freelancers</p>
-          <div className={"ml-10"}>
-            <Link
-              activeClass={"active"}
-              spy={true}
-              to="Upwork"
-              smooth={true}
-              duration={500}
-              offset={-90}
-            >
-              <p className={"cursor-pointer hover:text-orange"}>Upwork</p>
-            </Link>
-
-            <Link
-              activeClass="active"
-              to="Freelancer"
-              smooth={true}
-              duration={500}
-              offset={-90}
-            >
-              <p className={"cursor-pointer my-8 hover:text-orange"}>
-                Freelancer
-              </p>
-            </Link>
-            <Link
-              activeClass="active"
-              to="99designs"
-              smooth={true}
-              duration={500}
-              offset={-90}
-            >
-              <p className={"cursor-pointer hover:text-orange"}>99designs</p>
-            </Link>
-          </div>
-          <p className={"my-10"}>Best platforms for job search</p>
-          <div className={"ml-10"}>
-            <Link
-              activeClass="active"
-              to="XING"
-              smooth={true}
-              duration={500}
-              offset={-90}
-            >
-              <p className={"cursor-pointer hover:text-orange"}>XING</p>
-            </Link>
-            <Link
-              activeClass="active"
-              to="Indeed"
-              smooth={true}
-              duration={500}
-              offset={-90}
-            >
-              <p className={"cursor-pointer hover:text-orange my-8"}>Indeed</p>
-            </Link>
-            <Link
-              activeClass="active"
-              to="CareerBuilder"
-              smooth={true}
-              duration={500}
-              offset={-90}
-            >
-              <p className={"cursor-pointer hover:text-orange"}>
-                CareerBuilder
-              </p>
-            </Link>
-          </div>
-        </div>
+        <PlatformsSideBar />
         <div className="  max-w-660 px-20 pb-100 mobile:pt-20 mobile:pb-50">
           <p className="mb-20">
             Freelance exchanges are an opportunity to enter the profession even
@@ -122,7 +56,7 @@ export const Platforms = () => {
             <li>&#183; how to attract a customer;</li>
             <li>&#183; how to avoid mistakes.</li>
           </ul>
-          <img src="best-platform.webp" className="my-40" />
+          <img src="best-platform.webp" className="my-40 mobile:my-20" />
           <Element name="Upwork" />
           <div
             className={"flex justify-between items-center mb-20 mobile:mb-5"}
@@ -137,7 +71,10 @@ export const Platforms = () => {
               />
               <h2 className={h2}>Upwork</h2>
             </div>
-            <a href="https://www.upwork.com/"  className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
+            <a
+              href="https://www.upwork.com/"
+              className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20"
+            >
               <Icons.Link className="text-page" />
             </a>
           </div>
@@ -244,7 +181,10 @@ export const Platforms = () => {
               <h2 className={h2}>99designs</h2>
             </div>
 
-            <a href="https://99designs.com/" className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
+            <a
+              href="https://99designs.com/"
+              className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20"
+            >
               <Icons.Link className="text-page" />
             </a>
           </div>
@@ -272,7 +212,7 @@ export const Platforms = () => {
               Free subscription available, but it does not provide access to
               high-Whenever you work with a new client, 99designs will charge an
               introduction fee of $100 and a platform fee ranging from 5% to
-              15%..
+              15%.
             </p>
             <p className={"text-orange mt-15"}>Withdrawal Process:</p>
             <p className={"mt-5"}>
@@ -280,12 +220,12 @@ export const Platforms = () => {
               days and sooner for people with higher profile levels.
             </p>
           </div>
-          <img src="best-search.webp" className="my-40" />
+          <img src="best-search.webp" className="my-40 mobile:my-20" />
 
           <Element name="XING" />
           <div
             className={
-              "flex justify-between items-center mt-40 mb-20 mobile:mb-5"
+              "flex justify-between items-center  mb-20 mobile:mb-5"
             }
           >
             <div className={"flex block items-center"}>
@@ -299,7 +239,10 @@ export const Platforms = () => {
               <h2 className={h2}>XING</h2>
             </div>
 
-            <a href="https://www.xing.com" className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
+            <a
+              href="https://www.xing.com"
+              className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20"
+            >
               <Icons.Link className="text-page" />
             </a>
           </div>
@@ -363,7 +306,10 @@ export const Platforms = () => {
               <h2 className={h2}>Indeed</h2>
             </div>
 
-            <a href="https://www.indeed.com/" className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
+            <a
+              href="https://www.indeed.com/"
+              className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20"
+            >
               <Icons.Link className="text-page" />
             </a>
           </div>
@@ -425,7 +371,10 @@ export const Platforms = () => {
               <h2 className={h2}>CareerBuilder</h2>
             </div>
 
-            <a href="https://www.careerbuilder.com" className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20">
+            <a
+              href="https://www.careerbuilder.com"
+              className="bg-orange rounded-full p-10 cursor-pointer  hover:bg-red-10 transition active:bg-red-20"
+            >
               <Icons.Link className="text-page" />
             </a>
           </div>

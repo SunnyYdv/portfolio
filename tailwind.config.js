@@ -37,6 +37,8 @@ module.exports = {
         'separator': 'separator 14s ease-in-out infinite',
         'geometry-1': 'geometry 14s ease-in-out infinite',
         'geometry-2': 'geometry1 14s ease-in-out infinite',
+        'side-open': 'sideBarOpen 2s ease-in-out ',
+        'side-close': 'sideBarClose 2s ease-in-out ',
       },
       boxShadow: {
         'interactive-1': '0px 4px 4px rgba(0, 0, 0, 0.08)',
@@ -105,6 +107,9 @@ module.exports = {
         '1/2': '50%',
         'full-30': `calc(100% - ${pxToRem(30)})`,
         200: pxToRem(200),
+        '10%': '10%',
+        '15%': '15%',
+        '20%': '20%',
         '25%': '25%',
         '50%': '50%',
         '75%': '75%',
@@ -213,6 +218,9 @@ module.exports = {
       fontFamily: {
         regarn: "Regarn",
         manrope: "Manrope"
+      },
+      transitionProperty: {
+        'margin': 'margin'
       }
     }
   }

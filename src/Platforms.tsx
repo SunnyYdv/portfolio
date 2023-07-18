@@ -88,11 +88,11 @@ export const Platforms = () => {
             without experience. We share the best sites and tell you where to
             start and how to make money on them.
           </p>
-          <img src="amin.png" className="rounded-20 object-cover mb-20" />
+          <img src="amin.webp" className="rounded-20 object-cover mb-20" />
           <p className="mb-20">
             There are many professions where freelancing is a full—fledged
             source of income. Moreover, this is remote work: you can work from
-            anywhere in the world and receive large orders — freelance is not
+            anywhere in the world and receive large orders—freelance is not
             tied to geography.
           </p>
           <p className="mb-20">
@@ -274,7 +274,7 @@ export const Platforms = () => {
             </p>
           </div>
           <img src="best-search.webp" className="my-40" />
-          Indeed CareerBuilder
+
           <Element name="XING" />
           <div
             className={

@@ -1,11 +1,11 @@
 import cls from "classnames";
 import { Icons } from "components/Icons";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const About = () => {
+
   return (
     <div className="px-50 mobile:px-15">
-      <div className="text-48 mobile:text-26 uppercase mb-20">
+      <div className="text-48 mobile:text-26 uppercase mb-10">
         <p className="max-w-80% mobile:max-w-full">
           At our company <Icons.Star className="text-orange inline" />
           we provide{" "}
@@ -19,23 +19,19 @@ export const About = () => {
         </p>
       </div>
 
-      <LazyLoadImage alt={""} src={"freelance-com.webp"} />
+      <img
+        className={"rounded-15 w-full h-full mt-20 mb-30"}
+        src="freelance-com.webp"
+        alt="freelance com"
+      />
 
-      <div
-        className={cls(
-          "max-w-880 text-38 mobile:text-24 text-orange mb-60 mt-30"
-        )}
-      >
+      <div className={cls("max-w-880 text-38 mobile:text-24 text-orange mb-60")}>
         We assure you of confidentiality, effectiveness, and the provision of
         high-quality services.
       </div>
 
-      <div
-        className={
-          "flex mobile:flex-col space-x-40 mobile:space-x-0 mobile:space-y-20"
-        }
-      >
-        <div>
+      <div className={"flex mobile:flex-col space-x-40 mobile:space-x-0 mobile:space-y-20"}>
+        <div >
           <Icons.BigStar className="text-dark-pink" />
           <div className={"mt-16 text-18"}>
             Our team of experienced consultants possesses a profound
@@ -60,11 +56,7 @@ export const About = () => {
         </div>
       </div>
 
-      <div
-        className={
-          "text-orange text-28 mobile:text-24 max-w-660 mt-60 mb-120 mobile:mb-100"
-        }
-      >
+      <div className={"text-orange text-28 mobile:text-24 max-w-660 mt-60 mb-120 mobile:mb-100"}>
         By engaging our services, you can expect to receive professional
         consultation, a personalized approach, and practical assistance crucial
         for a fruitful job search and triumph on freelance platforms.

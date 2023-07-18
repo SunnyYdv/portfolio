@@ -56,6 +56,8 @@ export const Platforms = () => {
             <li>&#183; how to attract a customer;</li>
             <li>&#183; how to avoid mistakes.</li>
           </ul>
+          <img src="best-platform.webp" srcSet="best-platform-phone.webp 300w, best-platform.webp 700w"   sizes="(max-width: 600px 300w" />
+
           <img src="best-platform.webp" className="my-40 mobile:my-20" />
           <Element name="Upwork" />
           <div

@@ -1,6 +1,5 @@
 import cls from "classnames";
-import React, { useCallback, useState } from "react";
-import { useLocation, useNavigate } from "react-router";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { Icons } from "./Icons";
 
@@ -34,8 +33,8 @@ export const PlatformsSideBar = () => {
         className={cls(
           "center bg-light-orange sticky p-20 rounded-8 transition duration-1000 absolute top-50%",
           {
-            "-translate-y-100%": isMobile && !isShow,
-            "-translate-y-10%": !isMobile || isShow,
+            "-translate-y-100% opacity-0": isMobile && !isShow,
+            "-translate-y-10% ": !isMobile || isShow,
           }
         )}
       >

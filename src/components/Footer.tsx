@@ -56,9 +56,9 @@ export const Footer = () => {
             />
           </a>
 
-          <div className={"opacity-80 tracking-wide"}>
-            <p className={"text-12"}>Developed by </p>
-            <p className={"text-20"}>Brightlab</p>
+          <div className={" tracking-wide"}>
+            <p className={"text-12 opacity-80"}>Developed by </p>
+            <a className={"text-20 cursor-pointer transition opacity-80 hover:opacity-100"} href="https://brightlab.me/">Brightlab</a>
           </div>
         </div>
       </div>

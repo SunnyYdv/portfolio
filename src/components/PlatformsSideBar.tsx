@@ -1,9 +1,9 @@
 import cls from "classnames";
-import React, { useState } from "react";
+import React, { Ref, useState } from "react";
 import { Link } from "react-scroll";
 import { Icons } from "./Icons";
 
-export const PlatformsSideBar = () => {
+export const PlatformsSideBar = React.forwardRef((props, ref) => {
   const [isShow, setIsShow] = useState(false);
 
   const isMobile = window.innerWidth < 600;
@@ -12,11 +12,14 @@ export const PlatformsSideBar = () => {
     setIsShow((prev) => !prev);
   };
 
+
   return (
     <div className={cls("relative overflow-hidden transition-margin duration-1000 h-fit rounded-8",{
       "-mb-300 ": isMobile && !isShow,
       "-mb-20 ": !isMobile || isShow,
-    })}>
+    })}
+    ref={ref}
+  >
       <div
         onClick={handleToggleIsShow}
         className={"center bg-light-orange sticky p-20 rounded-8 z-10"}
@@ -105,4 +108,6 @@ export const PlatformsSideBar = () => {
       </div>
     </div>
   );
-};
+});
+
+

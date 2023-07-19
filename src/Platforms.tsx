@@ -2,9 +2,48 @@ import { Icons } from "components/Icons";
 import { Link, Element } from "react-scroll";
 import cls from "classnames";
 import { PlatformsSideBar } from "components";
+import { useEffect, useRef, useState } from "react";
 
 export const Platforms = () => {
-  const h2 = "text-orange font-bold font-manrope my-30 mobile:my-20 text-28 mobile:text-20";
+  const h2 =
+    "text-orange font-bold font-manrope my-30 mobile:my-20 text-28 mobile:text-20";
+
+  const [upButtonShow, setUpButtonShow] = useState(false);
+  const sideBarRef = useRef<HTMLDivElement>(null);
+
+
+  const handleScrollToTop =()=>{
+    window.scrollTo(
+      {top:300,
+       left:0, 
+      behavior: 'smooth'} )
+  }
+  useEffect(() => {
+    const preworkBuilderHeaderContainer = sideBarRef.current;
+    if (!preworkBuilderHeaderContainer) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        const preworkBuilderHeaderContainerOnScreen = entry.isIntersecting;
+
+        if (
+          (preworkBuilderHeaderContainerOnScreen && upButtonShow === false) ||
+          (!preworkBuilderHeaderContainerOnScreen && upButtonShow === true)
+        ) {
+          return
+        }
+
+        setUpButtonShow(preworkBuilderHeaderContainerOnScreen ? false : true)
+      },
+      { threshold: [0] }
+    );
+    observer.observe(sideBarRef.current);
+
+    return (): void => {
+      observer.disconnect();
+    };
+  }, [sideBarRef.current, upButtonShow]);
 
   return (
     <div className="px-30  mobile:px-15 ">
@@ -19,7 +58,7 @@ export const Platforms = () => {
       </div>
 
       <div className={"justify-center mr-100 mobile:mr-0 flex mobile:flex-col"}>
-        <PlatformsSideBar />
+        <PlatformsSideBar ref={sideBarRef} />
         <div className="  max-w-660 px-20 pb-100 mobile:pt-20 mobile:pb-50">
           <p className="mb-20">
             Freelance exchanges are an opportunity to enter the profession even
@@ -28,10 +67,10 @@ export const Platforms = () => {
           </p>
           <img src="amin.webp" className="rounded-20 object-cover mb-20" />
           <p className="mb-20">
-            There are many professions where freelancing is a full—fledged
-            source of income. Moreover, this is remote work: you can work from
-            anywhere in the world and receive large orders—freelance is not tied
-            to geography.
+            There are many professions where freelancing is a full &#8211;
+            fledged source of income. Moreover, this is remote work: you can
+            work from anywhere in the world and receive large orders &#8212;
+            freelance is not tied to geography.
           </p>
           <p className="mb-20">
             Another advantage of freelancing is a great start in the profession,
@@ -225,9 +264,7 @@ export const Platforms = () => {
 
           <Element name="XING" />
           <div
-            className={
-              "flex justify-between items-center  mb-20 mobile:mb-5"
-            }
+            className={"flex justify-between items-center  mb-20 mobile:mb-5"}
           >
             <div className={"flex block items-center"}>
               <img
@@ -415,6 +452,7 @@ export const Platforms = () => {
           </div>
         </div>
       </div>
+      {upButtonShow && <div  onClick={handleScrollToTop} className="w-40 h-40 fixed right-40 bottom-90 mobile:bottom-80 mobile:right-20 bg-orange rounded-full flex items-center justify-center cursor-pointer drop-shadow-lg border border-page"><Icons.ArrowDown className="rotate-180 text-page" /></div>}
     </div>
   );
 };

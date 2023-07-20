@@ -35,8 +35,8 @@
 @font-face {
   font-family: "Manrope";
   font-weight: 600;
-  src: url("./fonts/Manrope-Semibold.woff2"),
-    url("./fonts/Manrope-Semibold.woff"), url("./fonts/Manrope-Semibold.ttf");
+  src: url("./fonts/Manrope-SemiBold.woff2"),
+    url("./fonts/Manrope-SemiBold.woff"), url("./fonts/Manrope-SemiBold.ttf");
 }
 
 @font-face {

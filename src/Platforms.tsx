@@ -2,48 +2,16 @@ import { Icons } from "components/Icons";
 import { Link, Element } from "react-scroll";
 import cls from "classnames";
 import { PlatformsSideBar } from "components";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 export const Platforms = () => {
   const h2 =
     "text-orange font-bold font-manrope my-30 mobile:my-20 text-28 mobile:text-20";
+  const isTablet = window.innerWidth < 900;
 
-  const [upButtonShow, setUpButtonShow] = useState(false);
-  const sideBarRef = useRef<HTMLDivElement>(null);
-
-
-  const handleScrollToTop =()=>{
-    window.scrollTo(
-      {top:300,
-       left:0, 
-      behavior: 'smooth'} )
-  }
-  useEffect(() => {
-    const preworkBuilderHeaderContainer = sideBarRef.current;
-    if (!preworkBuilderHeaderContainer) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        const preworkBuilderHeaderContainerOnScreen = entry.isIntersecting;
-
-        if (
-          (preworkBuilderHeaderContainerOnScreen && upButtonShow === false) ||
-          (!preworkBuilderHeaderContainerOnScreen && upButtonShow === true)
-        ) {
-          return
-        }
-
-        setUpButtonShow(preworkBuilderHeaderContainerOnScreen ? false : true)
-      },
-      { threshold: [0] }
-    );
-    observer.observe(sideBarRef.current);
-
-    return (): void => {
-      observer.disconnect();
-    };
-  }, [sideBarRef.current, upButtonShow]);
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 300, left: 0, behavior: "smooth" });
+  };
 
   return (
     <div className="px-30  mobile:px-15 ">
@@ -57,8 +25,8 @@ export const Platforms = () => {
         </div>
       </div>
 
-      <div className={"justify-center mr-100 mobile:mr-0 flex mobile:flex-col"}>
-        <PlatformsSideBar ref={sideBarRef} />
+      <div className={"justify-center space-x-20 mr-180 tablet:mr-0 mx-auto mobile:mr-0 flex tablet:flex-col"}>
+        <PlatformsSideBar />
         <div className="  max-w-660 px-20 pb-100 mobile:pt-20 mobile:pb-50">
           <p className="mb-20">
             Freelance exchanges are an opportunity to enter the profession even
@@ -148,9 +116,17 @@ export const Platforms = () => {
             </p>
           </div>
           <Element name="Freelancer" />
+          {isTablet && (
+            <div
+              className="flex items-center mt-12"
+              onClick={handleScrollToTop}
+            >
+              <Icons.ArrowBack /> back to top
+            </div>
+          )}
           <div
             className={
-              "flex justify-between items-center mt-60 mb-20 mobile:mb-5"
+              "flex justify-between items-center mt-60 mobile:mt-30 mb-20 mobile:mb-5"
             }
           >
             <div className={"flex block items-center"}>
@@ -205,9 +181,17 @@ export const Platforms = () => {
             </p>
           </div>
           <Element name="99designs" />
+          {isTablet && (
+            <div
+              className="flex items-center mt-12"
+              onClick={handleScrollToTop}
+            >
+              <Icons.ArrowBack /> back to top
+            </div>
+          )}
           <div
             className={
-              "flex justify-between items-center mt-60 mb-20 mobile:mb-5"
+              "flex justify-between items-center mt-60 mobile:mt-30 mb-20 mobile:mb-5"
             }
           >
             <div className={"flex block items-center"}>
@@ -260,9 +244,18 @@ export const Platforms = () => {
               days and sooner for people with higher profile levels.
             </p>
           </div>
+          {isTablet && (
+            <div
+              className="flex items-center mt-12"
+              onClick={handleScrollToTop}
+            >
+              <Icons.ArrowBack /> back to top
+            </div>
+          )}
           <img src="best-search.webp" className="my-40 mobile:my-20" />
 
           <Element name="XING" />
+
           <div
             className={"flex justify-between items-center  mb-20 mobile:mb-5"}
           >
@@ -328,6 +321,14 @@ export const Platforms = () => {
             </p>
           </div>
           <Element name="Indeed" />
+          {isTablet && (
+            <div
+              className="flex items-center mt-12"
+              onClick={handleScrollToTop}
+            >
+              <Icons.ArrowBack /> back to top
+            </div>
+          )}
           <div
             className={
               "flex justify-between items-center mt-40 mb-20 mobile:mb-5"
@@ -393,6 +394,14 @@ export const Platforms = () => {
             </p>
           </div>
           <Element name="CareerBuilder" />
+          {isTablet && (
+            <div
+              className="flex items-center mt-12"
+              onClick={handleScrollToTop}
+            >
+              <Icons.ArrowBack /> back to top
+            </div>
+          )}
           <div
             className={
               "flex justify-between items-center mt-40 mb-20 mobile:mb-5"
@@ -450,9 +459,16 @@ export const Platforms = () => {
               to refine their search results further.
             </p>
           </div>
+          {isTablet && (
+            <div
+              className="flex items-center mt-12"
+              onClick={handleScrollToTop}
+            >
+              <Icons.ArrowBack /> back to top
+            </div>
+          )}
         </div>
       </div>
-      {upButtonShow && <div  onClick={handleScrollToTop} className="w-40 h-40 fixed right-40 bottom-90 mobile:bottom-80 mobile:right-20 bg-orange rounded-full flex items-center justify-center cursor-pointer drop-shadow-lg border border-page"><Icons.ArrowDown className="rotate-180 text-page" /></div>}
     </div>
   );
 };

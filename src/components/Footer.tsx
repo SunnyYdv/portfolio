@@ -39,10 +39,10 @@ export const Footer = () => {
           <div>
             <p className={"text-12 font-thin"}>Email</p>
             <a
-              href={"mailto:Freelancee@gmail.com"}
+              href={"mailto:freelance_office@gmail.com"}
               className={"text-20 mobile:text-16  cursor-pointer"}
             >
-              Freelancee@gmail.com
+              freelance_office@gmail.com
             </a>
           </div>
         </div>

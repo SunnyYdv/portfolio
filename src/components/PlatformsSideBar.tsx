@@ -3,45 +3,71 @@ import React, { Ref, useState } from "react";
 import { Link } from "react-scroll";
 import { Icons } from "./Icons";
 
-export const PlatformsSideBar = React.forwardRef((props, ref) => {
+export const PlatformsSideBar = () => {
   const [isShow, setIsShow] = useState(false);
 
-  const isMobile = window.innerWidth < 600;
+  const isTablet = window.innerWidth < 900;
 
   const handleToggleIsShow = () => {
     setIsShow((prev) => !prev);
   };
 
-
   return (
-    <div className={cls("relative overflow-hidden transition-margin duration-1000 h-fit rounded-8",{
-      "-mb-300 ": isMobile && !isShow,
-      "-mb-20 ": !isMobile || isShow,
-    })}
-    ref={ref}
-  >
+    <div
+      className={cls(
+        " sticky top-150 tablet:relative tablet:overflow-hidden tablet:top-0 transition-margin duration-1000 h-fit rounded-8",
+        {
+          "-mb-[20rem] ": isTablet && !isShow,
+          "mb-2rem ": !isTablet || isShow,
+        }
+      )}
+    >
       <div
         onClick={handleToggleIsShow}
-        className={"center bg-light-orange sticky p-20 rounded-8 z-10"}
-    >
-        <p className="text-orange w-fit border-b border-b-orange mobile:border-none pb-6 mobile:pb-0">Introduction</p>
-        {isMobile && <Icons.ArrowDown
-          className={cls("absolute top-27 right-25 mobile:cursor-pointer duration-500 transition", {
-            'rotate-180':  isMobile && isShow
-          })}
-          onClick={handleToggleIsShow}
-        />}
+        className={"center sticky bg-light-orange p-20 rounded-8 z-10"}
+      >
+        <p className="text-orange w-fit font-semibold pb-6 mobile:pb-0">
+          Table of contents
+        </p>
+        {isTablet && (
+          <Icons.ArrowDown
+            className={
+              "absolute text-orange top-27 right-25 mobile:cursor-pointer "
+            }
+            onClick={handleToggleIsShow}
+          />
+        )}
       </div>
       <div
         className={cls(
-          "center bg-light-orange sticky p-20 rounded-8 transition duration-1000 absolute top-50%",
+          " center bg-light-orange sticky p-20 rounded-8 transition duration-1000 absolute top-50%",
           {
-            "-translate-y-100% opacity-0": isMobile && !isShow,
-            "-translate-y-10% ": !isMobile || isShow,
+            "-translate-y-100% opacity-0": isTablet && !isShow,
+            "-translate-y-[2rem]": !isTablet && !isShow ,
+            "translate-y-[5px]  ": isTablet && isShow,
           }
         )}
       >
-        <p className={"my-10 mobile:underline underline-offset-1"}>Best platforms for freelancers</p>
+        {isTablet && (
+          <p className="text-orange font-semibold pb-6 mobile:pb-0">
+            Table of contents
+          </p>
+        )}
+        {isTablet && (
+          <div
+          onClick={handleToggleIsShow}
+          >
+
+          <Icons.ArrowDown
+            className={
+              "absolute text-orange top-27 right-25 mobile:cursor-pointer rotate-180"
+            }
+            />
+            </div>
+        )}
+        <p className={"my-10 mobile:underline underline-offset-1"}>
+          Best platforms for freelancers
+        </p>
         <div className={"ml-10"}>
           <Link
             activeClass={"active"}
@@ -51,7 +77,10 @@ export const PlatformsSideBar = React.forwardRef((props, ref) => {
             duration={500}
             offset={-90}
           >
-            <p className={"cursor-pointer hover:text-orange"}>Upwork</p>
+            <div className="w-fit group/item">
+              <p className={"cursor-pointer"}>Upwork</p>
+              <div className="border-b border-black group-hover/item:animate-side-bar"></div>
+            </div>
           </Link>
 
           <Link
@@ -61,9 +90,10 @@ export const PlatformsSideBar = React.forwardRef((props, ref) => {
             duration={500}
             offset={-90}
           >
-            <p className={"cursor-pointer my-8 hover:text-orange"}>
-              Freelancer
-            </p>
+            <div className="w-fit group/item my-8">
+              <p className={"cursor-pointer"}>Freelancer</p>
+              <div className="border-b border-black group-hover/item:animate-side-bar"></div>
+            </div>
           </Link>
           <Link
             activeClass="active"
@@ -72,10 +102,15 @@ export const PlatformsSideBar = React.forwardRef((props, ref) => {
             duration={500}
             offset={-90}
           >
-            <p className={"cursor-pointer hover:text-orange"}>99designs</p>
+            <div className="w-fit group/item">
+              <p className={"cursor-pointer"}>99designs</p>
+              <div className="border-b border-black group-hover/item:animate-side-bar"></div>
+            </div>
           </Link>
         </div>
-        <p className={"my-10  mobile:underline underline-offset-1"}>Best platforms for job search</p>
+        <p className={"my-10  mobile:underline underline-offset-1"}>
+          Best platforms for job search
+        </p>
         <div className={"ml-10"}>
           <Link
             activeClass="active"
@@ -84,7 +119,10 @@ export const PlatformsSideBar = React.forwardRef((props, ref) => {
             duration={500}
             offset={-90}
           >
-            <p className={"cursor-pointer hover:text-orange"}>XING</p>
+            <div className="w-fit group/item">
+              <p className={"cursor-pointer"}>XING</p>
+              <div className="border-b border-black group-hover/item:animate-side-bar"></div>
+            </div>
           </Link>
           <Link
             activeClass="active"
@@ -93,7 +131,10 @@ export const PlatformsSideBar = React.forwardRef((props, ref) => {
             duration={500}
             offset={-90}
           >
-            <p className={"cursor-pointer hover:text-orange my-8"}>Indeed</p>
+            <div className="w-fit group/item my-8">
+              <p className={"cursor-pointer"}>Indeed</p>
+              <div className="border-b border-black group-hover/item:animate-side-bar"></div>
+            </div>
           </Link>
           <Link
             activeClass="active"
@@ -102,12 +143,13 @@ export const PlatformsSideBar = React.forwardRef((props, ref) => {
             duration={500}
             offset={-90}
           >
-            <p className={"cursor-pointer hover:text-orange"}>CareerBuilder</p>
+            <div className="w-fit group/item">
+              <p className={"cursor-pointer"}>CareerBuilder</p>
+              <div className="border-b border-black group-hover/item:animate-side-bar"></div>
+            </div>
           </Link>
         </div>
       </div>
     </div>
   );
-});
-
-
+}

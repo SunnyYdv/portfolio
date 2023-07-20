@@ -36,7 +36,8 @@ module.exports = {
         'image-left': 'imageLeft 14s ease-in-out infinite',
         'separator': 'separator 14s ease-in-out infinite',
         'geometry-1': 'geometry 14s ease-in-out infinite',
-        'geometry-2': 'geometry1 14s ease-in-out infinite'
+        'geometry-2': 'geometry1 14s ease-in-out infinite',
+        'side-bar': 'sideBarHover 0.6s ease-in-out'
       },
       boxShadow: {
         'interactive-1': '0px 4px 4px rgba(0, 0, 0, 0.08)',
@@ -190,7 +191,8 @@ module.exports = {
         inherit: 'inherit',
         auto: 'auto',
         fit: 'fit-content',
-        screen: '100vw'
+        screen: '100vw',
+        '30%': '30%',
       },
       height: {
         100: pxToRem(100),
@@ -219,6 +221,9 @@ module.exports = {
       },
       transitionProperty: {
         'margin': 'margin'
+      },
+      marginBottom: {
+        320: pxToRem(320),
       }
     }
   }

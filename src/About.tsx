@@ -2,7 +2,6 @@ import cls from "classnames";
 import { Icons } from "components/Icons";
 
 export const About = () => {
-
   return (
     <div className="px-50 mobile:px-15">
       <div className="text-48 mobile:text-26 uppercase mb-10">
@@ -18,20 +17,28 @@ export const About = () => {
           <Icons.Star className="text-orange inline" />
         </p>
       </div>
+      <div className="bg-light-orange px-50 py-100 mobile:py-80 relative rounded-15 mt-20 mb-30">
+        <img
+          className={"absolute-center w-full h-full px-130 mobile:px-10 py-40 "}
+          src="circle.webp"
+          alt="freelance com"
+        />
+        <p className="text-orange text-46 tablet:text-24 font-semibold absolute-center">freelance_office@gmail.com</p>
+      </div>
 
-      <img
-        className={"rounded-15 w-full h-full mt-20 mb-30"}
-        src="freelance-com.webp"
-        alt="freelance com"
-      />
-
-      <div className={cls("max-w-880 text-38 mobile:text-24 text-orange mb-60")}>
+      <div
+        className={cls("max-w-880 text-38 mobile:text-24 text-orange mb-60")}
+      >
         We assure you of confidentiality, effectiveness, and the provision of
         high-quality services.
       </div>
 
-      <div className={"flex mobile:flex-col space-x-40 mobile:space-x-0 mobile:space-y-20"}>
-        <div >
+      <div
+        className={
+          "flex mobile:flex-col space-x-40 mobile:space-x-0 mobile:space-y-20"
+        }
+      >
+        <div>
           <Icons.BigStar className="text-dark-pink" />
           <div className={"mt-16 text-18"}>
             Our team of experienced consultants possesses a profound
@@ -56,7 +63,11 @@ export const About = () => {
         </div>
       </div>
 
-      <div className={"text-orange text-28 mobile:text-24 max-w-660 mt-60 mb-120 mobile:mb-100"}>
+      <div
+        className={
+          "text-orange text-28 mobile:text-24 max-w-660 mt-60 mb-120 mobile:mb-100"
+        }
+      >
         By engaging our services, you can expect to receive professional
         consultation, a personalized approach, and practical assistance crucial
         for a fruitful job search and triumph on freelance platforms.

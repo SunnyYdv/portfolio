@@ -25,7 +25,7 @@ export const Platforms = () => {
         </div>
       </div>
 
-      <div className={"justify-center space-x-20 mr-180 tablet:mr-0 mx-auto mobile:mr-0 flex tablet:flex-col"}>
+      <div className={"justify-center space-x-20 tablet:space-x-0 mr-180 tablet:mr-0 mx-auto mobile:mr-0 flex tablet:flex-col"}>
         <PlatformsSideBar />
         <div className="  max-w-660 px-20 pb-100 mobile:pt-20 mobile:pb-50">
           <p className="mb-20">

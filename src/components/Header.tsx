@@ -33,7 +33,8 @@ export const Header = () => {
       )}
     >
       <img  onClick={toHome} src="fhLogo.svg" className="cursor-pointer" />
-      <div className="w-30% ml-30 h-6 bg-orange rounded-30 absolute bottom-0 left-20" />
+      {!location.pathname.includes("home") &&
+      <div className="w-30% ml-30 h-6 bg-orange rounded-30 absolute bottom-0 left-20" />}
       <div className="space-x-40 mobile:space-x-20 mobile:text-16 font-thin">
         <span onClick={toBlog} className={cls("cursor-pointer", {
           "text-orange border-b pb-10 border-b-orange border-b-2 ": location.pathname.includes("blog"),

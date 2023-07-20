@@ -15,10 +15,10 @@ export const PlatformsSideBar = () => {
   return (
     <div
       className={cls(
-        " sticky top-150 tablet:relative tablet:overflow-hidden tablet:top-0 transition-margin duration-1000 h-fit rounded-8",
+        " sticky top-150 tablet:relative tablet:overflow-hidden pb-20 tablet:top-0 transition-margin duration-1000 h-fit rounded-8",
         {
-          "-mb-[20rem] ": isTablet && !isShow,
-          "mb-2rem ": !isTablet || isShow,
+          "-mb-[22rem] ": isTablet && !isShow,
+          "-mb-[0.6rem] ": isTablet && isShow
         }
       )}
     >
@@ -45,6 +45,7 @@ export const PlatformsSideBar = () => {
             "-translate-y-100% opacity-0": isTablet && !isShow,
             "-translate-y-[2rem]": !isTablet && !isShow ,
             "translate-y-[5px]  ": isTablet && isShow,
+            // " translate-y-10%": isTablet && isShow,
           }
         )}
       >

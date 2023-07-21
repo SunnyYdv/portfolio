@@ -98,7 +98,7 @@ export const Header = () => {
         <div className="px-20">
           <div
             ref={progressRef}
-            className="h-6 bg-orange rounded-30 "
+            className="h-6 w-0 bg-orange rounded-30 "
           />
         </div>
       )}

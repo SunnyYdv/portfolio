@@ -1,10 +1,11 @@
 import cls from "classnames";
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router";
 
 export const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const progressRef = useRef<HTMLDivElement>(null);
 
   const toBlog = useCallback(() => {
     navigate("/blog");
@@ -22,6 +23,22 @@ export const Header = () => {
     navigate("/home");
   }, []);
 
+
+  useEffect(() => {
+    function scrollProgressBar() {
+      const winScroll = document.documentElement.scrollTop;
+      const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      progressRef!.current!.style.width = scrolled + "%";
+    }
+
+    window.addEventListener('scroll', ()=> scrollProgressBar())
+
+    return window.removeEventListener('scroll', ()=>scrollProgressBar())
+  });
+
   return (
     <nav
       className={cls(
@@ -34,7 +51,10 @@ export const Header = () => {
     >
       <img onClick={toHome} src="fhLogo.svg" className="cursor-pointer" />
       {!location.pathname.includes("home") && (
-        <div className="w-30% ml-1rem  h-6 bg-orange rounded-30 absolute bottom-0 left-20" />
+        <div
+          ref={progressRef}
+          className=" ml-1rem  h-6 bg-orange rounded-30 absolute bottom-0 left-20"
+        />
       )}
       <div className="space-x-40 mobile:space-x-20 mobile:text-16 font-thin">
         <span

@@ -99,7 +99,7 @@ export const Blog = () => {
         </p>
 
         <p className="bg-light-orange p-24 rounded-10">
-          <h4 className="mb-10">Remember:</h4>
+          <span className="mb-10 ">Remember:</span> <br/>
           Keep backups of all iterations of your portfolio so that you can look
           back and reminisce about your evolution as a designer.
         </p>

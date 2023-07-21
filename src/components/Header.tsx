@@ -35,7 +35,7 @@ export const Header = () => {
 
       const scrolled = (scrollTop / height) * 100;
 
-      progressRef.current && (progressRef.current.style.width = scrolled + "%");
+      scrolled <=100 && progressRef.current && (progressRef.current.style.width = scrolled + "%");
     }
 
     window.addEventListener("scroll", () => scrollProgressBar());

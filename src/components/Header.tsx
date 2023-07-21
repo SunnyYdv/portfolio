@@ -95,7 +95,7 @@ export const Header = () => {
         </div>
       </nav>
       {!location.pathname.includes("home") && (
-        <div className="px-20">
+        <div className="px-20 overflow-hidden">
           <div
             ref={progressRef}
             className="h-6 w-0 bg-orange rounded-30 "
